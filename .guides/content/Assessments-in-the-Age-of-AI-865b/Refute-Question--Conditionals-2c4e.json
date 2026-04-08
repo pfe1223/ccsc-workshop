@@ -1,0 +1,22 @@
+{
+	"id": "2c4eef81-c5ab-8f83-c2f3-c7d4cc3eba82",
+	"title": "Refute Question: Conditionals",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
+			"path": " code/refute_exercise.py",
+			"panel": 0,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": false,
+	"learningObjectives": ""
+}

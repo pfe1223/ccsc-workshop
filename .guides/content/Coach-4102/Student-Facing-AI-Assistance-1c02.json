@@ -1,0 +1,22 @@
+{
+	"id": "1c02445b-6f82-917d-d6af-594b035a4bc2",
+	"title": "Student-Facing AI Assistance",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
+			"path": " code/rb-smallest/Smallest.java",
+			"panel": 0,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": false,
+	"learningObjectives": ""
+}

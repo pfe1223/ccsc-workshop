@@ -1,0 +1,53 @@
+{
+	"type": "test",
+	"taskId": "test-1681882510",
+	"source": {
+		"name": "Probeable Question",
+		"showName": false,
+		"instructions": "**Submit your work for evaluation**",
+		"command": "python /usr/share/codio/assessments/assessments.py",
+		"codeEnvConfig": "{\"type\":\"python\",\"subtype\":\"unittest\",\"files\":[\".guides/secure/probeable/unit_tests.py\"],\"maxPoints\":20,\"timeout\":40,\"executable\":\"python3\",\"pythonwd\":\".guides/secure/probeable\",\"partialPoints\":false}",
+		"pythonPath": "/home/codio/workspace/code",
+		"timeoutSeconds": 40,
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Advanced Code Test"
+				},
+				{
+					"name": "Content",
+					"value": "blah"
+				},
+				{
+					"name": "Programming Language",
+					"value": "blah"
+				}
+			],
+			"files": [
+				"code/probeable_exercise.py"
+			],
+			"layout": "2-panels",
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 0,
+					"content": "code/probeable_exercise.py"
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "blah",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 20,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	},
+	"linkedId": "c452648e-a7a5-49cc-86bf-f7c9a2a3001b",
+	"libraryId": "16668ac1-dbfd-45cb-b45c-92054f67c5ac",
+	"version": 0
+}

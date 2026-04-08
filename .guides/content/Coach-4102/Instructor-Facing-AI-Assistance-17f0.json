@@ -1,0 +1,17 @@
+{
+	"id": "17f0d32e-b87e-a8f9-24c5-0d64e1590bdc",
+	"title": "Instructor-Facing AI Assistance",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "2-panels",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": false,
+	"learningObjectives": ""
+}

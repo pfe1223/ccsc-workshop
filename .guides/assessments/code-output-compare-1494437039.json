@@ -1,0 +1,89 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-1494437039",
+	"source": {
+		"name": "nth smallest red-black",
+		"showName": false,
+		"instructions": "**Submit your work for evaluation.**",
+		"command": "java -cp code/rb-smallest/ Smallest",
+		"preExecuteCommand": "javac code/rb-smallest/Smallest.java code/rb-smallest/Helper.java",
+		"options": {
+			"timeout": 30,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				},
+				{
+					"name": "Category",
+					"value": "Advanced Trees"
+				},
+				{
+					"name": "Code",
+					"value": "DSA-Advanced-Trees-1"
+				},
+				{
+					"name": "Content",
+					"value": "Red-Black Trees"
+				},
+				{
+					"name": "Programming Language",
+					"value": "Java"
+				}
+			],
+			"files": [
+				"code/rb-smallest/Smallest.java",
+				".guides/img/rb-smallest1.png",
+				".guides/img/rb-smallest2.png",
+				"code/rb-smallest/Helper.java"
+			],
+			"layout": "2-panels",
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 0,
+					"content": "code/rb-smallest/Smallest.java"
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "6",
+		"learningObjectives": "SWBAT find the nth smallest tree of a given color",
+		"guidance": "There is one possible solution:\n\n## Pubic `nthSmallest` Method\n\n```java-hide-clipboard\n    public static int nthSmallest(Tree tree, int color, int position) {\n        ArrayList<Integer> nodes = new ArrayList<Integer>();\n        nthSmallest(tree.getRoot(), color, nodes);\n        return nodes.get(position - 1);\n    }\n```\n\n* To find the $n^{th}$ smallest value in a Red-Black tree, create the public `nthSmallest` method.\n* This method takes a `Tree` object, an integer representing the color (either `1` for red or `0` for black), and an integer representing the $n^{th}$ position.\n* Create an empty ArrayList of integers. Since we are working with a tree structure, we are going to recursively solve this problem.\n* Call the recursive `nthSmallest` method (see below) and pass it the node of the tree, the color, and the ArrayList.\n* Return the element at index `position - 1`.\n\n## Private `nthSmallest` Method\n\n```java-hide-clipboard\n    private static void nthSmallest(Node n, int color, ArrayList<Integer> nodes) {\n        if (n != null) {\n            nthSmallest(n.getLeft(), color, nodes);\n            if (n.getColor() == color) {\n                nodes.add(n.getValue());\n            }\n            nthSmallest(n.getRight(), color, nodes);\n        }\n    }\n```\n\n* The private `nthSmallest` method takes a `Node` object, an integer representing the color and an ArrayList of integers.\n* The method does not return a value.\n* As long as the `Node` object is not `null` first recurse down the left subtree.\n* If the color of the node matches the expected color, add it to the ArrayList.\n* Then recurse down the right subtree.\n* We are using a pre-order traversal so the values will be placed in the ArrayList in ascending order.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 2
+		},
+		"maxAttemptsCount": 0,
+		"points": 20,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "3 0 3",
+				"input": "",
+				"output": "18\n",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "4 1 2",
+				"input": "",
+				"output": "45\n",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	},
+	"linkedId": "a5364304-9fac-48d5-85de-bf111fc46a88",
+	"libraryId": "7f9c49e5-5dbb-48ea-8006-6944447abbe6",
+	"version": 3
+}

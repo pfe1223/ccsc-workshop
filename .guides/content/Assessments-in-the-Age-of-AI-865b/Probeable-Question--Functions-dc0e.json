@@ -1,0 +1,22 @@
+{
+	"id": "dc0ec98f-49e6-988f-0636-f0f6de75bb81",
+	"title": "Probeable Question: Functions",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
+			"path": " code/probeable_exercise.py",
+			"panel": 0,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": false,
+	"learningObjectives": ""
+}

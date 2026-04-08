@@ -1,0 +1,17 @@
+{
+	"id": "0d70459a-3f7c-2311-90ae-5c469d76d251",
+	"title": "AI Use Statement",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "2-panels",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": false,
+	"learningObjectives": ""
+}

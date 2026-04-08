@@ -1,0 +1,17 @@
+{
+	"id": "809971c5-15df-0d0d-9684-c1c63546c307",
+	"title": "Coding Exercises",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "1-panel",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

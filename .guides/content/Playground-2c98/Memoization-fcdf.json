@@ -1,0 +1,17 @@
+{
+	"id": "fcdf8187-d634-5332-48cd-fd3e2b341e50",
+	"title": "Memoization",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "1-panel",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

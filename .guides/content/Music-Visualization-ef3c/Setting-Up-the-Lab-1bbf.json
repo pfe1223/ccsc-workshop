@@ -1,0 +1,29 @@
+{
+	"chapter": false,
+	"closeTerminalSession": true,
+	"contentType": "markdown",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
+			"path": "sketch.js",
+			"panel": 0,
+			"action": "open"
+		},
+		{
+			"path": "#preview: index.html",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"id": "1bbf4313-97e3-5f2e-aebe-58154b6dc597",
+	"layout": "3-cell",
+	"learningObjectives": "",
+	"path": [],
+	"reset": [],
+	"teacherOnly": false,
+	"title": "Setting Up the Lab",
+	"type": "page"
+}

@@ -1,0 +1,17 @@
+{
+	"id": "f3e17e30-c324-dd1a-3425-39646f3bbc13",
+	"title": "Standard Code Test",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "1-panel",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

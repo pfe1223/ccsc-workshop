@@ -1,0 +1,11 @@
+{
+	"id": "ef3c99f7-7e34-2dbe-90ef-e6ea1ea5885f",
+	"order": [
+		"Lab-Overview-a68c",
+		"Setting-Up-the-Lab-1bbf",
+		"Adding-an-FFT-7c5d",
+		"Creating-the-Visualization-9e25"
+	],
+	"title": "Music Visualization",
+	"type": "section"
+}

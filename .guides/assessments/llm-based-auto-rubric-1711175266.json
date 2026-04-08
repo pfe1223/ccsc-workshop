@@ -1,0 +1,76 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-1711175266",
+	"source": {
+		"name": "section 2",
+		"showName": false,
+		"instructions": "**Submit your work for evaluation.**",
+		"metadata": {
+			"tags": [],
+			"files": [
+				"sketch.js",
+				"index.html"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 0,
+					"content": "sketch.js"
+				},
+				{
+					"type": "preview",
+					"panelNumber": 1,
+					"content": "index.html"
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "Here is one possible solution:\n\n```javascript\nlet sound, button, fft\n\nfunction preload() {\n  sound = loadSound('music/Beat-Culture-Midori.mp3')\n}\n\nfunction setup() {\n  createCanvas(400, 300);\n  button = createButton('Play/Stop')\n  button.mousePressed(() => {\n    if (sound.isPlaying()) {\n      sound.stop()\n    } else {\n      sound.play()\n    }\n  })\n  fft = new p5.FFT(0.5, 512)\n}\n\nfunction draw() {\n  background(220);\n  let spectrum = fft.analyze()\n  showFft(spectrum)\n}\n\nfunction showFft(s) {\n  textAlign(CENTER, CENTER)\n  let num = s.filter((n) => n > 0).length\n  let str = `There are ${num} elements whose\\nvalue is greater than 0`\n  textSize(20)\n  text(str, width/2, height/2)\n}\n```",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 2
+		},
+		"maxAttemptsCount": 0,
+		"points": 5,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "1",
+				"title": "Creating an FFT object",
+				"description": "Student correctly creates an FFT object to analyze the music. The FFT object should be properly initialized in the sketch.",
+				"points": 1
+			},
+			{
+				"id": "2",
+				"title": "Setting up FFT parameters",
+				"description": "Student configures the FFT object with 512 bins and uses 0.5 as the smoothing factor as specified in the instructions.",
+				"points": 1
+			},
+			{
+				"id": "3",
+				"title": "Continuous music analysis",
+				"description": "Student implements code that continually analyzes the music (likely in the draw function), ensuring the FFT analysis runs throughout the sketch execution.",
+				"points": 1
+			},
+			{
+				"id": "4",
+				"title": "Implementation of showFft function",
+				"description": "Student correctly implements the provided showFft function in their sketch and passes the FFT analysis results to it.",
+				"points": 1
+			},
+			{
+				"id": "5",
+				"title": "Functional visualization",
+				"description": "When music plays, the visualization correctly displays text showing the number of elements with values greater than 0, with this number typically reaching the 300's as specified in the instructions.",
+				"points": 1
+			}
+		],
+		"solutions": [
+			{
+				"path": ".guides/secure/section2.js",
+				"content": "let sound, button, fft\n\nfunction preload() {\n  sound = loadSound('music/Beat-Culture-Midori.mp3')\n}\n\nfunction setup() {\n  createCanvas(400, 300);\n  button = createButton('Play/Stop')\n  button.mousePressed(() => {\n    if (sound.isPlaying()) {\n      sound.stop()\n    } else {\n      sound.play()\n    }\n  })\n  fft = new p5.FFT(0.5, 512)\n}\n\nfunction draw() {\n  background(220);\n  let spectrum = fft.analyze()\n  showFft(spectrum)\n}\n\nfunction showFft(s) {\n  textAlign(CENTER, CENTER)\n  let num = s.filter((n) => n > 0).length\n  let str = `There are ${num} elements whose\\nvalue is greater than 0`\n  textSize(20)\n  text(str, width/2, height/2)\n}"
+			}
+		]
+	}
+}

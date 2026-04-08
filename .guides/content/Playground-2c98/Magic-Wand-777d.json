@@ -1,0 +1,17 @@
+{
+	"id": "777db094-0460-1af5-dad3-e67506bf34cf",
+	"title": "Magic Wand",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "1-panel",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

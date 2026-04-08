@@ -1,0 +1,29 @@
+{
+	"chapter": false,
+	"closeTerminalSession": true,
+	"contentType": "markdown",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
+			"path": "sketch.js",
+			"panel": 0,
+			"action": "open"
+		},
+		{
+			"path": "#preview: index.html",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"id": "9e25234e-88f9-fd01-c07c-21d68d0b7e86",
+	"layout": "3-cell",
+	"learningObjectives": "",
+	"path": [],
+	"reset": [],
+	"teacherOnly": false,
+	"title": "Creating the Visualization",
+	"type": "page"
+}

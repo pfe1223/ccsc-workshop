@@ -1,0 +1,76 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-3971275327",
+	"source": {
+		"name": "section 3",
+		"showName": false,
+		"instructions": "**Submit your work for evaluation.**",
+		"metadata": {
+			"tags": [],
+			"files": [
+				"sketch.js",
+				"index.html"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 0,
+					"content": "sketch.js"
+				},
+				{
+					"type": "preview",
+					"panelNumber": 1,
+					"content": "index.html"
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "Here is one possible solution:\n\n```javascript\nlet sound, button, sm\n\nfunction preload() {\n  sound = loadSound('music/Beat-Culture-Midori.mp3')\n}\n\nfunction setup() {\n  createCanvas(640, 640);\n  button = createButton('Play/Stop')\n  button.mousePressed(() => {\n    if (sm.sound.isPlaying()) {\n      sm.sound.stop()\n    } else {\n      sm.sound.play()\n    }\n  })\n  noStroke()\n  fill(0)\n  sm = new SoundMatrix(sound)\n  sm.initialize()\n}\n\nfunction draw() {\n  background(220);\n  sm.analyze()\n  sm.show()\n}\n\nclass SoundMatrix {\n  constructor(music) {\n    this.sound = music\n    this.fft = new p5.FFT()\n    this.spectrum = []\n    this.dots = []\n    \n  }\n  \n  initialize() {\n    for (let i = 0; i < 32; i++) {\n      for (let j = 0; j < 32; j++) {\n        this.dots.push({\n          x: j * width / 32 + 8,\n          y: i * height / 32 + 8,\n          fftIndex: i + j\n        })\n      }\n    }\n    let indices = []\n    for (let i = 0; i < 1024; i++) {\n      indices.push(this.dots[i].fftIndex)\n    }\n    let shuffled = shuffle(indices)\n    for (let i = 0; i < 1024; i++) {\n      this.dots[i].fftIndex = shuffled[i]\n    }\n  }\n  \n  analyze() {\n    this.spectrum = this.fft.analyze()\n  }\n  \n  show() {\n    for (let i = 0; i < 1024; i++) {\n      let dot = this.dots[i]\n      let value = map(this.spectrum[dot.fftIndex], 0, 255, 0, 25)\n      \n      circle(dot.x, dot.y, value)\n    }  \n  }\n}\n```",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 2
+		},
+		"maxAttemptsCount": 0,
+		"points": 5,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "1",
+				"title": "Sketch Loads and Plays Music",
+				"description": "The sketch successfully loads an MP3 file and includes a functional button that starts and stops the sound playback.",
+				"points": 1
+			},
+			{
+				"id": "2",
+				"title": "Sound Analysis Implementation",
+				"description": "The sketch properly analyzes the amplitude of various frequencies in the music using appropriate p5.js sound analysis functions (like FFT).",
+				"points": 1
+			},
+			{
+				"id": "3",
+				"title": "Visual Reactivity to Music",
+				"description": "The visualization clearly responds to the music, with visual elements (shapes, lines, colors) that change in direct response to the analyzed sound data.",
+				"points": 1
+			},
+			{
+				"id": "4",
+				"title": "Creative Visual Design",
+				"description": "The visualization demonstrates creativity and thoughtful design choices in how the music is represented visually, going beyond basic implementations.",
+				"points": 1
+			},
+			{
+				"id": "5",
+				"title": "Code Quality and Organization",
+				"description": "The code is well-organized, properly commented, and follows good programming practices, making it easy to understand how the visualization works.",
+				"points": 1
+			}
+		],
+		"solutions": [
+			{
+				"path": ".guides/secure/section3.js",
+				"content": "let sound, button, sm\n\nfunction preload() {\n  sound = loadSound('music/Beat-Culture-Midori.mp3')\n}\n\nfunction setup() {\n  createCanvas(640, 640);\n  button = createButton('Play/Stop')\n  button.mousePressed(() => {\n    if (sm.sound.isPlaying()) {\n      sm.sound.stop()\n    } else {\n      sm.sound.play()\n    }\n  })\n  noStroke()\n  fill(0)\n  sm = new SoundMatrix(sound)\n  sm.initialize()\n}\n\nfunction draw() {\n  background(220);\n  sm.analyze()\n  sm.show()\n}\n\nclass SoundMatrix {\n  constructor(music) {\n    this.sound = music\n    this.fft = new p5.FFT()\n    this.spectrum = []\n    this.dots = []\n    \n  }\n  \n  initialize() {\n    for (let i = 0; i < 32; i++) {\n      for (let j = 0; j < 32; j++) {\n        this.dots.push({\n          x: j * width / 32 + 8,\n          y: i * height / 32 + 8,\n          fftIndex: i + j\n        })\n      }\n    }\n    let indices = []\n    for (let i = 0; i < 1024; i++) {\n      indices.push(this.dots[i].fftIndex)\n    }\n    let shuffled = shuffle(indices)\n    for (let i = 0; i < 1024; i++) {\n      this.dots[i].fftIndex = shuffled[i]\n    }\n  }\n  \n  analyze() {\n    this.spectrum = this.fft.analyze()\n  }\n  \n  show() {\n    for (let i = 0; i < 1024; i++) {\n      let dot = this.dots[i]\n      let value = map(this.spectrum[dot.fftIndex], 0, 255, 0, 25)\n      \n      circle(dot.x, dot.y, value)\n    }  \n  }\n}"
+			}
+		]
+	}
+}

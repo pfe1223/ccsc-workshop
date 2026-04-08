@@ -1,0 +1,17 @@
+{
+	"id": "a68c09ee-c987-2f11-0ab9-cdfa9260b307",
+	"title": "Lab Overview",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "1-panel",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

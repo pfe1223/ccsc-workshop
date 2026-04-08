@@ -1,0 +1,17 @@
+{
+	"id": "63caa823-4c73-e29b-2856-ef9047477986",
+	"title": "Reading Questions",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "1-panel",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

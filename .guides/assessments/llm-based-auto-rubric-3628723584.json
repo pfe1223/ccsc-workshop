@@ -1,0 +1,82 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-3628723584",
+	"source": {
+		"name": "section 1",
+		"showName": false,
+		"instructions": "**Submit your work for evaluation.**",
+		"metadata": {
+			"tags": [],
+			"files": [
+				"sketch.js",
+				"index.html"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 0,
+					"content": "sketch.js"
+				},
+				{
+					"type": "preview",
+					"panelNumber": 1,
+					"content": "index.html"
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "Here is one possible solution:\n\n```javascript\nlet sound, button\n\nfunction preload() {\n  sound = loadSound('music/Beat-Culture-Midori.mp3')\n}\n\nfunction setup() {\n  createCanvas(400, 400);\n  button = createButton('Play/Stop')\n  button.mousePressed(() => {\n    if (sound.isPlaying()) {\n      sound.stop()\n    } else {\n      sound.play()\n    }\n  })\n}\n\nfunction draw() {\n  background(220);\n}\n```",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 2
+		},
+		"maxAttemptsCount": 0,
+		"points": 6,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "1",
+				"title": "Loading the MP3 file",
+				"description": "The sketch correctly loads the MP3 file from the specified path 'music/Beat-Culture-Midori.mp3'. The preload() function should be used to ensure the audio file is loaded before the sketch starts.",
+				"points": 1
+			},
+			{
+				"id": "2",
+				"title": "Creating a Play/Stop button",
+				"description": "A button is created with the label 'Play/Stop'. The button should be visible and properly positioned within the sketch canvas.",
+				"points": 1
+			},
+			{
+				"id": "3",
+				"title": "Play functionality",
+				"description": "When the button is clicked and the audio is not playing, the sketch successfully plays the MP3 file. This requires proper event handling and use of the play() method.",
+				"points": 1
+			},
+			{
+				"id": "4",
+				"title": "Stop functionality",
+				"description": "When the button is clicked while the audio is playing, the sketch successfully stops the MP3 file. This requires tracking the current state of playback and using the stop() or pause() method appropriately.",
+				"points": 1
+			},
+			{
+				"id": "5",
+				"title": "Toggle behavior",
+				"description": "The button correctly toggles between play and stop states with each click, maintaining the appropriate functionality based on the current state of the audio playback.",
+				"points": 1
+			},
+			{
+				"id": "6",
+				"title": "Code organization and readability",
+				"description": "The code is well-organized, properly indented, and includes appropriate comments explaining the functionality. Variable names are descriptive and follow consistent naming conventions.",
+				"points": 1
+			}
+		],
+		"solutions": [
+			{
+				"path": ".guides/secure/section1.js",
+				"content": "let sound, button\n\nfunction preload() {\n  sound = loadSound('music/Beat-Culture-Midori.mp3')\n}\n\nfunction setup() {\n  createCanvas(400, 400);\n  button = createButton('Play/Stop')\n  button.mousePressed(() => {\n    if (sound.isPlaying()) {\n      sound.stop()\n    } else {\n      sound.play()\n    }\n  })\n}\n\nfunction draw() {\n  background(220);\n}"
+			}
+		]
+	}
+}
